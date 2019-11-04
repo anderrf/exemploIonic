@@ -17,7 +17,7 @@
       <ion-col>
           <ion-item>
           <ion-label position="floating">Valor 1:</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="valor1"></ion-input>
           </ion-item>
       </ion-col> 
     </ion-row>
@@ -25,20 +25,20 @@
       <ion-col>
           <ion-item>
           <ion-label position="floating">Valor 2:</ion-label>
-            <ion-input></ion-input>
+            <ion-input [(ngModel)]="valor2"></ion-input>
           </ion-item>
       </ion-col> 
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-button color="primary" expand="block">Calcular</ion-button>
+        <ion-button color="primary" expand="block" (click)="calcula()">Calcular</ion-button>
       </ion-col> 
     </ion-row>
     <ion-row>
       <ion-col>
           <ion-item>
           <ion-label position="floating">Resultado:</ion-label>
-            <ion-input></ion-input>
+            <ion-input [value]="exibeResultado()" disabled="true"></ion-input>
           </ion-item>
       </ion-col> 
     </ion-row>
